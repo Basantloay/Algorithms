@@ -4,4 +4,4 @@ This repository contains different algoritms in C++.
 
 ## 1.1 Sorting_Algorithms
 
-This folder contains Sorting algorithms: Insertion sort, Merge sort, Selection sort, Quick sort, Hybrid sort.
+This folder contains Sorting algorithms: Heap sort, Insertion sort, Merge sort, Selection sort, Quick sort, Hybrid sort.
