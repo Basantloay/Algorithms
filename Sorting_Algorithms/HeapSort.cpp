@@ -11,11 +11,13 @@ bool Swap(vector<int>& arr,int size,int index1,int index2)
 	int temp=arr.at(index1);
 	arr[index1]=arr[index2];
 	arr[index2]=temp;
+	//cout<<arr[index1]<<" "<<arr[index2];
+	return true;
 }
 
-void MaxHeap(vector<int>& arr,int size)
+void MaxHeap(vector<int>& arr,int num,int size)
 {
-	for(int i=0;i<size;i++)
+	for(int i=num;i<(size/2)-2;i++)
 	{
 		if(arr[i]<arr[(i*2)+1])
 			Swap(arr,size,i,(i*2)+1);
@@ -26,11 +28,12 @@ void MaxHeap(vector<int>& arr,int size)
 
 void HeapSort(vector<int>& arr,int size)
 {
-	MaxHeap(arr,size);
-	for(int i=size-1;i>0;i--)
+	MaxHeap(arr,0,size);
+	for(int i=size-1;i>size/2;i--)
 	{
+		//cout<<arr[i];
 		Swap(arr,size,i,0);
-		MaxHeap(arr,size);
+		MaxHeap(arr,i,size);
 	}
 
 
